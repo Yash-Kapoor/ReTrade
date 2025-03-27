@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "198424092854",
+    "project_id": "retrade-android-application",
+    "storage_bucket": "retrade-android-application.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198424092854:android:93df48a4e1e2fdac914617",
+        "android_client_info": {
+          "package_name": "com.example.retradeapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC-jTkVuuGrR_tXE2OE4ksKqGyqua8Bks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

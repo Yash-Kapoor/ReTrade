@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ReTrade Application</string>
+    <string name="cars">Cars</string>
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+    </string-array>
+</resources>

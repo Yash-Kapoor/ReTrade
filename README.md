@@ -14,8 +14,8 @@ ReTrade is a modern and efficient marketplace application designed for reselling
 
 ## Technologies Used
 
-- **Frontend**: Android (Java/Kotlin)
-- **Backend**: [Specify backend technology, e.g., Node.js, Django, or Firebase]
-- **Database**: [Specify database used, e.g., Firebase, PostgreSQL, MongoDB]
-- **Cloud Storage**: [Specify if applicable, e.g., Firebase Storage, AWS S3]
+- **Frontend**: Android (XML)
+- **Backend**: Android (Java)
+- **Database**: Firebase, SQLite
+- **Cloud Storage**: Firebase Storage
 - **Version Control**: Git and GitHub

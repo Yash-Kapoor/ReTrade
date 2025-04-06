@@ -38,12 +38,6 @@ public class HomePageActivity extends AppCompatActivity {
             finish();
         });
 
-        LinearLayout wishlistBtn = findViewById(R.id.wishlist_button);
-        wishlistBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(HomePageActivity.this, WishlistPage.class);
-            startActivity(intent);
-        });
-
         LinearLayout clothingCategory = findViewById(R.id.clothing_category);
         clothingCategory.setOnClickListener(v -> {
             Intent intent = new Intent(HomePageActivity.this, ClothingCategoryPage.class);

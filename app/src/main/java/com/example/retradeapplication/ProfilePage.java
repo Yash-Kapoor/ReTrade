@@ -93,12 +93,6 @@ public class ProfilePage extends AppCompatActivity {
             startActivity(intent);
         });
 
-        MaterialButton wishlistBtn = findViewById(R.id.wishlist_button);
-        wishlistBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(ProfilePage.this, WishlistPage.class);
-            startActivity(intent);
-        });
-
     }
 
     private void logoutUser() {

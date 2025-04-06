@@ -89,17 +89,6 @@
         android:columnCount="1"
         android:padding="8dp">
 
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/wishlist_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:backgroundTint="@android:color/holo_blue_dark"
-            android:padding="8dp"
-            android:text="Wishlist"
-            android:textColor="@android:color/white" />
-
         <com.google.android.material.button.MaterialButton
             android:id="@+id/editInformation_button"
             android:layout_width="match_parent"

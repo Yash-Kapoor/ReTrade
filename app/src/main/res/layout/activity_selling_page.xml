@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/selling_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:id="@+id/selling_page"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/white">
 
-    <!-- Back Button -->
     <ImageButton
         android:id="@+id/backButton"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_margin="10dp"
         android:background="@null"
-        android:contentDescription="Back"
+        android:contentDescription="Go back"
         android:scaleType="fitCenter"
-        android:src="@drawable/back_button" />
+        android:src="@drawable/back_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-    <!-- Scrollable Content -->
+    <!-- Main scrolling content -->
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/backButton"
-        android:layout_above="@id/bottom_navbar">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,149 +38,151 @@
             android:layout_marginEnd="10dp"
             android:gravity="center_horizontal">
 
-            <Button
-                android:id="@+id/btnSellNewProduct"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sell New Product"
-                android:backgroundTint="@android:color/holo_blue_dark"
-                android:textColor="@color/white"/>
-
+            <!-- Selected image preview -->
             <ImageView
                 android:id="@+id/click_image"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
                 android:src="@drawable/placeholder"
-                android:scaleType="fitCenter" />
+                android:contentDescription="Selected product image"/>
 
             <Button
-                android:id="@+id/camera_button"
+                android:id="@+id/select_image_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Click Image"
                 android:layout_marginTop="8dp"
+                android:text="Select Image"
                 android:backgroundTint="@android:color/holo_blue_dark"
                 android:textColor="@color/white"/>
 
+            <!-- Category spinner row -->
             <LinearLayout
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="Category:"
                     android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:text="Category: "
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
 
-                <EditText
-                    android:id="@+id/productCategory"
-                    android:layout_width="match_parent"
+                <Spinner
+                    android:id="@+id/productCategorySpinner"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:hint="Enter Category Here"
-                    android:inputType="numberDecimal"/>
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"/>
             </LinearLayout>
 
-            <!-- Product Title -->
+            <!-- Title field -->
             <TextView
                 android:layout_gravity="left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
                 android:text="Product Title"
-                android:textStyle="bold"/>
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:id="@+id/productTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter Product Title Here"
-                android:layout_marginTop="8dp"/>
+                android:inputType="text"/>
 
-            <!-- Product Description -->
+            <!-- Description field -->
             <TextView
                 android:layout_gravity="left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
                 android:text="Product Description"
-                android:textStyle="bold"/>
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:id="@+id/productDescription"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:hint="Enter Product Description Here"
-                android:layout_marginTop="8dp"
-                android:minHeight="100dp"
                 android:gravity="top"
-                android:inputType="textMultiLine"/>
+                android:inputType="textMultiLine"
+                android:maxLines="5"/>
 
-            <!-- Expected Price Section -->
+            <!-- Price row -->
             <LinearLayout
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="Expected Price:"
                     android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:text="Expected Price: "
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
 
                 <EditText
                     android:id="@+id/productPrice"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
                     android:hint="Enter Expected Price Here"
                     android:inputType="numberDecimal"/>
             </LinearLayout>
 
+            <!-- Submit button -->
             <Button
                 android:id="@+id/submit_product_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Submit"
                 android:layout_marginTop="16dp"
+                android:text="Submit"
                 android:backgroundTint="@android:color/holo_blue_dark"
                 android:textColor="@color/white"/>
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom Navigation Bar -->
+    <!-- Bottom navigation bar -->
     <LinearLayout
         android:id="@+id/bottom_navbar"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:background="#FFFFFF"
-        android:padding="10dp">
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Home Button -->
+        <!-- Home -->
         <LinearLayout
             android:id="@+id/home_button"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="center"
-            android:layout_height="wrap_content">
+            android:gravity="center">
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/icons_home" />
+                android:src="@drawable/icons_home"
+                android:contentDescription="Home"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -183,7 +191,7 @@
                 android:textColor="@color/black"/>
         </LinearLayout>
 
-        <!-- Sell Button -->
+        <!-- Sell -->
         <LinearLayout
             android:id="@+id/sell_button"
             android:layout_width="0dp"
@@ -195,7 +203,8 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@android:drawable/ic_menu_edit" />
+                android:src="@android:drawable/ic_menu_edit"
+                android:contentDescription="Sell"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -204,19 +213,20 @@
                 android:textColor="@color/black"/>
         </LinearLayout>
 
-        <!-- Profile Button -->
+        <!-- Profile -->
         <LinearLayout
             android:id="@+id/profile_button"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center">
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/icons_profile" />
+                android:src="@drawable/icons_profile"
+                android:contentDescription="Profile"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -225,5 +235,4 @@
                 android:textColor="@color/black"/>
         </LinearLayout>
     </LinearLayout>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

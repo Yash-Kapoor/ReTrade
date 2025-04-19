@@ -1,51 +1,48 @@
 package com.example.retradeapplication;
 
 public class Product {
-    private String category;
-    private String description;
-    private String image;
-    private String id;
+
     private String name;
-    private double price;
+    private String description;
+    private Double price;
+    private String category;
+    private String image;
+    private String uid;
     private String sellerID;
 
-    public Product() {}
+    public Product() {
+        // Required empty constructor for Firestore
+    }
 
-    public Product(String category, String description, String image, String id, String name, double price, String sellerID) {
-        this.category = category;
-        this.description = description;
-        this.image = image;
-        this.id = id;
+    public Product(String name, String description, Double price, String category, String image, String uid, String sellerID) {
         this.name = name;
+        this.description = description;
         this.price = price;
+        this.category = category;
+        this.image = image;
+        this.uid = uid;
         this.sellerID = sellerID;
     }
 
-    public String getCategory() {
-        return category;
-    }
+    // Getters and Setters
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 
-    public String getDescription() {
-        return description;
-    }
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
 
-    public String getImage() {
-        return image;
-    }
+    public Double getPrice() { return price; }
+    public void setPrice(Double price) { this.price = price; }
 
-    public String getId() {
-        return id;
-    }
+    public String getCategory() { return category; }
+    public void setCategory(String category) { this.category = category; }
 
-    public String getName() {
-        return name;
-    }
+    public String getImage() { return image; }
+    public void setImage(String image) { this.image = image; }
 
-    public double getPrice() {
-        return price;
-    }
+    public String getUid() { return uid; }
+    public void setUid(String uid) { this.uid = uid; }
 
-    public String getSellerID() {
-        return sellerID;
-    }
+    public String getSellerID() { return sellerID; }
+    public void setSellerID(String sellerID) { this.sellerID = sellerID; }
 }

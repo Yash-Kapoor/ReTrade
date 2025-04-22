@@ -48,6 +48,14 @@ public class ProfilePage extends AppCompatActivity {
             finish();
         });
 
+        LinearLayout btnChat = findViewById(R.id.chat_button);
+
+        btnChat.setOnClickListener(v -> {
+            Intent intent = new Intent(ProfilePage.this, ChatPage.class);
+            startActivity(intent);
+            finish();
+        });
+
         ImageButton backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(v -> {
             Intent intent = new Intent(ProfilePage.this, HomePageActivity.class);

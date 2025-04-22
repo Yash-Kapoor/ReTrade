@@ -169,20 +169,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Home -->
         <LinearLayout
             android:id="@+id/home_button"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/icons_home"
-                android:contentDescription="Home"/>
+                android:src="@drawable/icons_home" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -191,7 +189,6 @@
                 android:textColor="@color/black"/>
         </LinearLayout>
 
-        <!-- Sell -->
         <LinearLayout
             android:id="@+id/sell_button"
             android:layout_width="0dp"
@@ -203,8 +200,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@android:drawable/ic_menu_edit"
-                android:contentDescription="Sell"/>
+                android:src="@drawable/icons_sell" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -213,9 +209,8 @@
                 android:textColor="@color/black"/>
         </LinearLayout>
 
-        <!-- Profile -->
         <LinearLayout
-            android:id="@+id/profile_button"
+            android:id="@+id/chat_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -225,8 +220,27 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/icons_profile"
-                android:contentDescription="Profile"/>
+                android:src="@drawable/icons_chat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chat"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icons_profile" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -234,5 +248,6 @@
                 android:text="Profile"
                 android:textColor="@color/black"/>
         </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

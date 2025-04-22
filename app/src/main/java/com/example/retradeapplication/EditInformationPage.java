@@ -83,6 +83,7 @@ public class EditInformationPage extends AppCompatActivity {
         // Bottom Navigation
         findViewById(R.id.home_button).setOnClickListener(v -> navigateTo(HomePageActivity.class));
         findViewById(R.id.sell_button).setOnClickListener(v -> navigateTo(SellingPage.class));
+        findViewById(R.id.chat_button).setOnClickListener(v -> navigateTo(ChatPage.class));
         findViewById(R.id.profile_button).setOnClickListener(v -> navigateTo(ProfilePage.class));
     }
 

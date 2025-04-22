@@ -101,9 +101,9 @@ public class SellingPage extends AppCompatActivity {
             });
         });
 
-        // Bottom navigation
         findViewById(R.id.backButton).setOnClickListener(v -> startActivity(new Intent(this, HomePageActivity.class)));
         findViewById(R.id.home_button).setOnClickListener(v -> startActivity(new Intent(this, HomePageActivity.class)));
+        findViewById(R.id.chat_button).setOnClickListener(v -> startActivity(new Intent(this, ChatPage.class)));
         findViewById(R.id.profile_button).setOnClickListener(v -> startActivity(new Intent(this, ProfilePage.class)));
     }
 

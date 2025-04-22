@@ -62,6 +62,14 @@ public class BooksCategoryPage extends AppCompatActivity {
             finish();
         });
 
+        LinearLayout btnChat = findViewById(R.id.chat_button);
+
+        btnChat.setOnClickListener(v -> {
+            Intent intent = new Intent(BooksCategoryPage.this, ChatPage.class);
+            startActivity(intent);
+            finish();
+        });
+
         LinearLayout btnProfile = findViewById(R.id.profile_button);
         btnProfile.setOnClickListener(v -> {
             Intent intent = new Intent(BooksCategoryPage.this, ProfilePage.class);

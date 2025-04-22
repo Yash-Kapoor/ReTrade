@@ -160,6 +160,7 @@
                 android:textColor="@color/black"/>
         </LinearLayout>
 
+
         <LinearLayout
             android:id="@+id/sell_button"
             android:layout_width="0dp"
@@ -171,7 +172,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@android:drawable/ic_menu_edit" />
+                android:src="@drawable/icons_sell" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -179,6 +180,27 @@
                 android:text="Sell"
                 android:textColor="@color/black"/>
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chat_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icons_chat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chat"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/profile_button"
@@ -199,6 +221,7 @@
                 android:text="Profile"
                 android:textColor="@color/black"/>
         </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>

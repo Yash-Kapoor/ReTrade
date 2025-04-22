@@ -62,6 +62,14 @@ public class HomeDecorCategoryPage extends AppCompatActivity {
             finish();
         });
 
+        LinearLayout btnChat = findViewById(R.id.chat_button);
+
+        btnChat.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeDecorCategoryPage.this, ChatPage.class);
+            startActivity(intent);
+            finish();
+        });
+
         LinearLayout btnProfile = findViewById(R.id.profile_button);
         btnProfile.setOnClickListener(v -> {
             Intent intent = new Intent(HomeDecorCategoryPage.this, ProfilePage.class);

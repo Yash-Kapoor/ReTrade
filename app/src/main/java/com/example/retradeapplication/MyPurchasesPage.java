@@ -2,6 +2,7 @@ package com.example.retradeapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
@@ -23,6 +24,13 @@ public class MyPurchasesPage extends AppCompatActivity {
             return insets;
         });
 
+        ImageButton backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MyPurchasesPage.this, ProfilePage.class);
+            startActivity(intent);
+            finish();
+        });
+
         LinearLayout btnHome = findViewById(R.id.home_button);
 
         btnHome.setOnClickListener(v -> {
@@ -35,6 +43,14 @@ public class MyPurchasesPage extends AppCompatActivity {
 
         btnSell.setOnClickListener(v -> {
             Intent intent = new Intent(MyPurchasesPage.this, SellingPage.class);
+            startActivity(intent);
+            finish();
+        });
+
+        LinearLayout btnChat = findViewById(R.id.chat_button);
+
+        btnChat.setOnClickListener(v -> {
+            Intent intent = new Intent(MyPurchasesPage.this, ChatPage.class);
             startActivity(intent);
             finish();
         });

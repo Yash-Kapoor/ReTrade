@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -62,6 +63,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             intent.setData(Uri.parse("tel:" + phoneNumber));
             context.startActivity(intent);
         });
+
+        holder.chatWithSellerButton.setOnClickListener(v -> {
+            Toast.makeText(context, "Coming Soon", Toast.LENGTH_SHORT).show(); // This will show the toast
+        });
     }
 
 
@@ -74,7 +79,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView productName, productPrice, productDescription;
         ImageView productImage;
-        Button contactSellerButton;
+        Button contactSellerButton, chatWithSellerButton;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -83,6 +88,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             productPrice = itemView.findViewById(R.id.product_price);
             productImage = itemView.findViewById(R.id.product_image);
             contactSellerButton = itemView.findViewById(R.id.contact_seller_button);
+            chatWithSellerButton = itemView.findViewById(R.id.chat_with_seller_button);
         }
     }
 }
